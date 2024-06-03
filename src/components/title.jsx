@@ -1,8 +1,9 @@
 /* eslint-disable react/no-unknown-property */
-export default function Title() {
+import styles from './index.css'
+export default function Title({locked}) {
   return (
     <>
-      <h1> Fancy Counter</h1>
+      <h1 className='title'> {locked ? <span>LIMIT REACHED, PLEASE BUY THE PRO VERSION</span> : <span>Fancy Counter</span>}</h1>
       <Logo />
     </>
   );
