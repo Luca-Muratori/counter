@@ -1,6 +1,10 @@
 
-export default function Count() {
+export default function Count({number}) {
   return (
-    <p>0</p>
-  )
+    <p
+      className="count"
+    >
+      {number}
+    </p>
+  );
 }

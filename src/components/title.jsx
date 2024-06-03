@@ -1,8 +1,9 @@
 /* eslint-disable react/no-unknown-property */
+import styles from './index.css'
 export default function Title() {
   return (
     <>
-      <h1> Fancy Counter</h1>
+      <h1 className='title'> Fancy Counter</h1>
       <Logo />
     </>
   );
