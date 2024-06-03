@@ -6,13 +6,14 @@ import Title from "./title";
 
 export default function Card() {
   const [number, setNumber] = useState(0);
+  const locked = number === 5 ? true : false
 
   return (
-    <div className="card">
-      <Title />
+    <div className={` card ${locked ? "card--limit" :""}`}>
+      <Title locked={locked}/>
       <Count number={number}/>
-      <Button />
-      <PlusMinusCTA setNumber={setNumber}/>
+      <Button setNumber={setNumber}/>
+      <PlusMinusCTA setNumber={setNumber} locked={locked}/>
     </div>
   );
 }
